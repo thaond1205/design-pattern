@@ -11,7 +11,7 @@ Cách triển khai Singleton pattern
 - tạo biến private static và nó là duy nhất và được tạo trong class đó
 - tạo method public và trả về instace trên để các class các có thể truy cập vào 
 
-có 8 loại Singleton pattern
+có 8 kiểu Singleton pattern
 - Eager initialization.
 - Static block initialization.
 - Lazy Initialization.

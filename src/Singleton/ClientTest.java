@@ -1,12 +1,12 @@
 package Singleton;
 
-public class ClientTest {
+public class ClientTest{
 
     public static void main(String[] args) {
 //        EagerInitializationTest();
 //        LazyInitializationTest();
+//        ThreadSafeSingletonTest();
     }
-
 
     public static void EagerInitializationTest(){
         EagerInitialization e1 = EagerInitialization.getInstance();
@@ -24,5 +24,20 @@ public class ClientTest {
 
         LazyInitialization l2 = LazyInitialization.getInstance();
         System.out.println("Name2 : "+l2.getName());
+    }
+
+    public static void ThreadSafeSingletonTest(){
+        for (int i = 0 ; i < 5 ; i++){
+            ThreadSafeSingleton t1 = ThreadSafeSingleton.getInstance();
+            t1.setName(String.valueOf(i));
+            System.out.println(t1.getName());
+
+            try {
+                Thread.sleep(5000);
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
+
+        }
     }
 }
