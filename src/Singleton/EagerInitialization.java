@@ -10,7 +10,7 @@ public class EagerInitialization {
 
     }
 
-    //tạo method public để bên ngoài gọi vào
+    //tạo method public trả về INSTANCE bên trên để bên ngoài gọi vào
     public static EagerInitialization getInstance(){
         return INSTANCE;
     }
